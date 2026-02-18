@@ -168,7 +168,52 @@ EN
 </div>
 </div>
 </section>
-<footer class="bg-primary text-white py-16" dir="rtl">
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary dark:text-white mb-4">צרו קשר</h2>
+                <p class="text-gray-600 dark:text-gray-400">השאירו פרטים ונחזור אליכם בהקדם עם הצעה מנצחת לאירוע שלכם</p>
+            </div>
+            <form class="space-y-6" dir="rtl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 text-right">שם מלא</label>
+                        <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition text-right" placeholder="ישראל ישראלי">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 text-right">טלפון</label>
+                        <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition text-right" placeholder="050-0000000">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 text-right">אימייל</label>
+                    <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition text-right" placeholder="example@mail.com">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 text-right">סוג האירוע</label>
+                    <select class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition text-right">
+                        <option>חתונה</option>
+                        <option>אירוע חברה</option>
+                        <option>יום הולדת / מסיבה פרטית</option>
+                        <option>אחר</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 text-right">הודעה</label>
+                    <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition text-right" placeholder="ספרו לנו קצת על האירוע שלכם..."></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-primary text-white px-12 py-4 rounded-full font-bold hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        שליחת הודעה
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white py-16" dir="rtl">
 <div class="container mx-auto px-6">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-right border-b border-white/20 pb-12">
 <div class="space-y-4">
