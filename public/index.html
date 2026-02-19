@@ -3,36 +3,14 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Paul &amp; Greg - World Wide Bar &amp; Cocktails Services</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Heebo:wght@300;400;500;700&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#5A6337", // Olive Green from Paul & Greg logo
-                        secondary: "#D4AF37", // Gold accent if needed (not heavily used in ref but good for luxe)
-                        "brand-bg": "#EFE6DE", // Light cream/beige from Paul & Greg logo background
-                        "background-light": "#FFFFFF",
-                        "background-dark": "#0A1128",
-                        "text-light": "#333333",
-                        "text-dark": "#F3F4F6",
-                        "accent-gray": "#F5F5F5",
-                    },
-                    fontFamily: {
-                        serif: ["'Playfair Display'", "serif"],
-                        sans: ["'Heebo'", "sans-serif"],
-                        script: ["'Great Vibes'", "cursive"], // For the ampersand style
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.25rem",
-                    },
-                },
-            },
-        };
-    </script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://lh3.googleusercontent.com" crossorigin />
+<link rel="preload" href="/logo.png" as="image" fetchpriority="high" />
+<link rel="stylesheet" href="/tailwind.css" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Heebo:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet"/></noscript>
 <style>::-webkit-scrollbar {
             width: 8px;
         }
@@ -59,6 +37,12 @@
         .text-olive {
              color: #5A6337;
         }
+        .service-card img {
+            will-change: transform;
+        }
+        .card-overlay {
+            will-change: opacity;
+        }
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300">
@@ -66,7 +50,7 @@
 <div class="container mx-auto px-6 flex items-center justify-between h-44">
 <div class="flex items-center gap-8">
     <a href="#hero-section" class="transition-opacity hover:opacity-80">
-        <img alt="Paul & Greg" src="/logo.png" class="h-[10rem]" />
+        <img alt="Paul & Greg" src="/logo.png" class="h-[10rem]" decoding="async" />
     </a>
 </div>
 <div class="hidden md:flex items-center gap-6 text-sm text-gray-600 dark:text-gray-300 font-medium ml-auto pr-8">
@@ -87,7 +71,7 @@ EN
 <header id="hero-section" class="relative h-screen w-full flex flex-col items-center justify-center bg-brand-bg dark:bg-background-dark text-primary px-4 overflow-hidden">
 <div class="z-10 text-center max-w-4xl mx-auto space-y-4 fade-in-up flex flex-col items-center">
 <div class="mb-4 relative">
-<img alt="Paul & Greg" src="/logo.png" class="w-96 md:w-[36rem] mx-auto" />
+<img alt="Paul & Greg" src="/logo.png" class="w-96 md:w-[36rem] mx-auto" fetchpriority="high" decoding="sync" />
 <p class="text-sm md:text-base tracking-widest text-primary/80 font-medium uppercase mt-6">World Wide Bar &amp; Cocktails Services</p>
 </div>
 <div class="pt-8">
@@ -102,10 +86,10 @@ EN
 <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24">
 <div class="w-full md:w-1/2 relative h-[500px]">
 <div class="absolute top-0 left-0 w-3/4 h-64 overflow-hidden shadow-xl z-10">
-<img alt="Bartenders preparing drinks" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsQgoaXHy4fXbwIpsku0NfVcbHq63LWbQ9-WuC7wRWPDPyfUNUlmdUF2vxaoHVAPIJ9RgvxU4J27cddjtQ79mdqM91r2-MUXzU13lIxVts4qsaiZfOVtbzswwkRBJaEfumQvFufuLOpCaNhU62Ln28rzQkYiC5jcOMru1q_gQdawZ1Hcth5mYgWVrjmLL-8IFQrxju1N1ukC2a_vo_HjpJmzl6t9IdZFqT07XBde2z8fzw2Tp4SQrA4MTO9rABdweOiQJeBy-lLbve"/>
+<img alt="Bartenders preparing drinks" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsQgoaXHy4fXbwIpsku0NfVcbHq63LWbQ9-WuC7wRWPDPyfUNUlmdUF2vxaoHVAPIJ9RgvxU4J27cddjtQ79mdqM91r2-MUXzU13lIxVts4qsaiZfOVtbzswwkRBJaEfumQvFufuLOpCaNhU62Ln28rzQkYiC5jcOMru1q_gQdawZ1Hcth5mYgWVrjmLL-8IFQrxju1N1ukC2a_vo_HjpJmzl6t9IdZFqT07XBde2z8fzw2Tp4SQrA4MTO9rABdweOiQJeBy-lLbve" loading="lazy" decoding="async" />
 </div>
 <div class="absolute bottom-0 right-0 w-2/3 h-80 overflow-hidden shadow-xl z-0 mt-8">
-<img alt="Champagne on ice" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEXOabOkANMAGGOoYsERiqgTmWurunhIQFicbyRMZNY6xAb4oFkeu3FMxOxNB9HnJN3ZI7oToalehVmHWID0xPGx2T9CECipXWAEXLVp5_YUSDi4o_fRvrWkSJZKFXJ1oUcLHUcVC51EGmS7Qdo60gLE4ib6uXw2qHmzStZSpEzzypec4KjwyrhTOaoELiI8HwGXbCT86jrqYT76zNaaDg0-45ELUXIjHCOvsRcJ9cW2HKVO1HrX_PV2-1gAldXNr17-YQr900CkQw"/>
+<img alt="Champagne on ice" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEXOabOkANMAGGOoYsERiqgTmWurunhIQFicbyRMZNY6xAb4oFkeu3FMxOxNB9HnJN3ZI7oToalehVmHWID0xPGx2T9CECipXWAEXLVp5_YUSDi4o_fRvrWkSJZKFXJ1oUcLHUcVC51EGmS7Qdo60gLE4ib6uXw2qHmzStZSpEzzypec4KjwyrhTOaoELiI8HwGXbCT86jrqYT76zNaaDg0-45ELUXIjHCOvsRcJ9cW2HKVO1HrX_PV2-1gAldXNr17-YQr900CkQw" loading="lazy" decoding="async" />
 </div>
 </div>
 <div class="w-full md:w-1/2 text-right md:pr-12 space-y-6">
@@ -127,9 +111,9 @@ EN
 <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary dark:text-white">שירותי הבר שלנו</h2>
 </div>
 <div class="container mx-auto px-6">
-<div id="services-accordion" class="flex flex-col md:flex-row h-auto md:h-[600px] gap-1">
-<div class="service-card relative overflow-hidden h-[40vh] md:h-full cursor-pointer transition-all duration-700 ease-in-out md:flex-[1]" data-index="0">
-<img alt="Coffee machine" class="w-full h-full object-cover transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlaPV74F7MU2yUH4ePEw6VzAcmEZ07qiyFcXGPj59P8ZB9cGTo_Ji9mdEIEOiU0_vUrVvSFP2FKdABqhFZ9qkGaYfmyHNfDzyLQ04XQTuUuhmhC6enUmGMSPj22kOkT3kGgog57YLnbsxsvZLCWFxb0Wh07Fn50GpSSwk1OBv1EOy3eX-4elPUekR3YRUPJjYnaM3kniQXQDClX352GiuHQj7XthJD1IgZT3SSFLFCUaHmwGFbOnhy-txpbKYK9jH4Y-fiDAWnxJGR"/>
+<div id="services-accordion" class="flex flex-col md:flex-row md:aspect-video gap-1">
+<div class="service-card relative overflow-hidden aspect-video md:aspect-auto md:h-full cursor-pointer transition-all duration-700 ease-in-out md:flex-[1]" data-index="0">
+<img alt="Coffee machine" class="w-full h-full object-cover transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlaPV74F7MU2yUH4ePEw6VzAcmEZ07qiyFcXGPj59P8ZB9cGTo_Ji9mdEIEOiU0_vUrVvSFP2FKdABqhFZ9qkGaYfmyHNfDzyLQ04XQTuUuhmhC6enUmGMSPj22kOkT3kGgog57YLnbsxsvZLCWFxb0Wh07Fn50GpSSwk1OBv1EOy3eX-4elPUekR3YRUPJjYnaM3kniQXQDClX352GiuHQj7XthJD1IgZT3SSFLFCUaHmwGFbOnhy-txpbKYK9jH4Y-fiDAWnxJGR" loading="lazy" decoding="async" />
 <div class="absolute top-8 left-1/2 -translate-x-1/2 w-11/12 text-center z-20">
 <button class="w-full bg-primary/80 backdrop-blur-sm text-white px-6 py-3 text-sm border border-white/20 hover:bg-primary transition-colors">
                             בר קוקטלים לאירועים
@@ -141,8 +125,8 @@ EN
 </div>
 </div>
 </div>
-<div class="service-card active relative overflow-hidden h-[40vh] md:h-full cursor-pointer transition-all duration-700 ease-in-out md:flex-[4]" data-index="1">
-<img alt="Bartender pouring" class="w-full h-full object-cover transition-transform duration-700 scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK0Ft1ssgGjaf7wgjDCoM_V29gUBhLezv2SkOn3S-7pdpypPkfAGPaEoMKYQaIu3t3zTB-awBO7NIYJsT2pxZm82IdwDukPYqSlYp4p5DdawNhXeDyur892tT7156Y-WpXQy1jbhci5lN2XEGcNqm5IT8e9GlkpotQrmx1yppHCDaOHKnhjbVPLngfnJeZK_cRPtCnoJTa9upJREaEgJSFYYPWzU7EONolsixFUmePULlTJ8V_zM2TwRVrdqcBtZj4qiM-x_hWy_ov"/>
+<div class="service-card active relative overflow-hidden aspect-video md:aspect-auto md:h-full cursor-pointer transition-all duration-700 ease-in-out md:flex-[4]" data-index="1">
+<img alt="Bartender pouring" class="w-full h-full object-cover transition-transform duration-700 scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK0Ft1ssgGjaf7wgjDCoM_V29gUBhLezv2SkOn3S-7pdpypPkfAGPaEoMKYQaIu3t3zTB-awBO7NIYJsT2pxZm82IdwDukPYqSlYp4p5DdawNhXeDyur892tT7156Y-WpXQy1jbhci5lN2XEGcNqm5IT8e9GlkpotQrmx1yppHCDaOHKnhjbVPLngfnJeZK_cRPtCnoJTa9upJREaEgJSFYYPWzU7EONolsixFUmePULlTJ8V_zM2TwRVrdqcBtZj4qiM-x_hWy_ov" loading="lazy" decoding="async" />
 <div class="absolute top-8 left-1/2 -translate-x-1/2 w-11/12 text-center z-20">
 <button class="w-full bg-primary/80 backdrop-blur-sm text-white px-6 py-3 text-sm border border-white/20 hover:bg-primary transition-colors">
                             בר קוקטלים לחתונות
@@ -154,8 +138,8 @@ EN
 </div>
 </div>
 </div>
-<div class="service-card relative overflow-hidden h-[40vh] md:h-full cursor-pointer transition-all duration-700 ease-in-out md:flex-[1]" data-index="2">
-<img alt="Elegant bar setup" class="w-full h-full object-cover transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWVqDyZ-WBI5ufZwP6ncnLhXmLHpKcc4KcG23y2Wg-07y117-B53wVxES7dKFb4cH-ys0YqZsLfi9JcL6fFMqKn9SDzA8yZ84cwU8d2eq7UyB2Wlag2WlCwT6iOv7alLwsn3I7TDVNq3zLALzgxD8XwBSdLRzezejiBQCk7t9JGxGi8uK2ng8q2ihx85X-xi-WqMAD4h8zYrzMlIMv2FOem-osDrrUfYwZ1ZROP-10KAGFUv2sYbMi6Ja-Tr8EDMnjLtWUFucgKWyP"/>
+<div class="service-card relative overflow-hidden aspect-video md:aspect-auto md:h-full cursor-pointer transition-all duration-700 ease-in-out md:flex-[1]" data-index="2">
+<img alt="Elegant bar setup" class="w-full h-full object-cover transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWVqDyZ-WBI5ufZwP6ncnLhXmLHpKcc4KcG23y2Wg-07y117-B53wVxES7dKFb4cH-ys0YqZsLfi9JcL6fFMqKn9SDzA8yZ84cwU8d2eq7UyB2Wlag2WlCwT6iOv7alLwsn3I7TDVNq3zLALzgxD8XwBSdLRzezejiBQCk7t9JGxGi8uK2ng8q2ihx85X-xi-WqMAD4h8zYrzMlIMv2FOem-osDrrUfYwZ1ZROP-10KAGFUv2sYbMi6Ja-Tr8EDMnjLtWUFucgKWyP" loading="lazy" decoding="async" />
 <div class="absolute top-8 left-1/2 -translate-x-1/2 w-11/12 text-center z-20">
 <button class="w-full bg-primary/80 backdrop-blur-sm text-white px-6 py-3 text-sm border border-white/20 hover:bg-primary transition-colors">
                             בר קוקטלים לאירועי חברה
@@ -247,7 +231,7 @@ EN
 </div>
 </div>
 <div class="flex flex-col items-center md:items-start justify-center">
-<img alt="Paul & Greg" src="/logo.png" class="w-32 brightness-0 invert" />
+<img alt="Paul & Greg" src="/logo.png" class="w-32 brightness-0 invert" loading="lazy" decoding="async" />
 <div class="text-xs uppercase tracking-widest opacity-80 mt-2">Bar &amp; Cocktails</div>
 </div>
 </div>
@@ -270,37 +254,54 @@ EN
 <script>
 const header = document.getElementById('sticky-header');
 const hero = document.getElementById('hero-section');
+let heroHeight = hero.offsetHeight;
+let ticking = false;
+
 window.addEventListener('scroll', () => {
-  if (window.scrollY >= hero.offsetHeight) {
-    header.classList.remove('-translate-y-full');
-    header.classList.add('translate-y-0');
-  } else {
-    header.classList.add('-translate-y-full');
-    header.classList.remove('translate-y-0');
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      if (window.scrollY >= heroHeight) {
+        header.classList.remove('-translate-y-full');
+        header.classList.add('translate-y-0');
+      } else {
+        header.classList.add('-translate-y-full');
+        header.classList.remove('translate-y-0');
+      }
+      ticking = false;
+    });
+    ticking = true;
   }
-});
+}, { passive: true });
+
+window.addEventListener('resize', () => {
+  heroHeight = hero.offsetHeight;
+}, { passive: true });
 
 const accordion = document.getElementById('services-accordion');
-const cards = accordion.querySelectorAll('.service-card');
+const cardData = Array.from(accordion.querySelectorAll('.service-card')).map(card => ({
+  card,
+  overlay: card.querySelector('.card-overlay'),
+  img: card.querySelector('img'),
+}));
 
 function setActiveCard(activeIndex) {
-  cards.forEach((card, i) => {
+  cardData.forEach(({ card, overlay, img }, i) => {
     if (i === activeIndex) {
       card.style.flex = '4';
       card.classList.add('active');
-      card.querySelector('.card-overlay').style.opacity = '1';
-      card.querySelector('img').style.transform = 'scale(1.05)';
+      overlay.style.opacity = '1';
+      img.style.transform = 'scale(1.05)';
     } else {
       card.style.flex = '1';
       card.classList.remove('active');
-      card.querySelector('.card-overlay').style.opacity = '0';
-      card.querySelector('img').style.transform = 'scale(1)';
+      overlay.style.opacity = '0';
+      img.style.transform = 'scale(1)';
     }
   });
 }
 
 if (window.innerWidth >= 768) {
-  cards.forEach((card, i) => {
+  cardData.forEach(({ card }, i) => {
     card.addEventListener('mouseenter', () => setActiveCard(i));
   });
   accordion.addEventListener('mouseleave', () => setActiveCard(1));
