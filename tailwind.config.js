@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./public/index.html"],
+    content: ["./public/**/*.html"],
     safelist: [
         // Added dynamically by JS (not present in initial HTML)
         "translate-y-0",

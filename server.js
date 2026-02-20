@@ -15,11 +15,18 @@ function fileHash(filePath) {
 const cssHash = fileHash(path.join(__dirname, 'public', 'tailwind.css'));
 const jsHash = fileHash(path.join(__dirname, 'public', 'app.js'));
 
-// Pre-render index.html with hashes baked in
-const rawHtml = fs.readFileSync(path.join(__dirname, 'public', 'index.html'), 'utf8');
-const indexHtml = rawHtml
-  .replace(/__CSS_HASH__/g, cssHash)
-  .replace(/__JS_HASH__/g, jsHash);
+// Pre-render HTML files with hashes baked in
+function renderHtml(filename) {
+  const raw = fs.readFileSync(path.join(__dirname, 'public', filename), 'utf8');
+  return raw.replace(/__CSS_HASH__/g, cssHash).replace(/__JS_HASH__/g, jsHash);
+}
+
+const pages = {
+  index: renderHtml('index.html'),
+  weddings: renderHtml('weddings.html'),
+  events: renderHtml('events.html'),
+  corporate: renderHtml('corporate.html'),
+};
 
 // Security headers
 app.use(helmet({
@@ -44,7 +51,7 @@ app.use(compression());
 
 // Early preload hints — browser starts fetching before HTML is parsed
 app.use((req, res, next) => {
-  if (req.path === '/' || req.path.endsWith('.html')) {
+  if (['/', '/weddings', '/events', '/corporate'].includes(req.path)) {
     res.setHeader('Link', [
       `</tailwind.css?v=${cssHash}>; rel=preload; as=style`,
       '</logo.webp>; rel=preload; as=image; type=image/webp',
@@ -55,12 +62,19 @@ app.use((req, res, next) => {
   next();
 });
 
-// Serve index.html with hashes injected
-app.get('/', (req, res) => {
-  res.setHeader('Content-Type', 'text/html; charset=utf-8');
-  res.setHeader('Cache-Control', 'no-cache');
-  res.send(indexHtml);
-});
+// Serve pages with hashes injected
+function servePage(page) {
+  return (req, res) => {
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    res.setHeader('Cache-Control', 'no-cache');
+    res.send(page);
+  };
+}
+
+app.get('/', servePage(pages.index));
+app.get('/weddings', servePage(pages.weddings));
+app.get('/events', servePage(pages.events));
+app.get('/corporate', servePage(pages.corporate));
 
 // Static files with production-grade cache headers
 app.use(express.static(path.join(__dirname, 'public'), {

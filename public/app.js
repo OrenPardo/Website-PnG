@@ -9,14 +9,14 @@ const translations = {
     'nav-cta': 'יצירת קשר',
     'lang-btn': 'EN',
     'nav-aria': 'ניווט ראשי',
-    // Hero
+    // Hero (homepage)
     'hero-cta': 'האירוע שלכם מתחיל כאן',
     // Story
     'story-title': 'הסיפור שלנו',
     'story-p1': 'אנחנו פאול וגרג, שני חברים שהפכו את התשוקה שלהם לקוקטיילים למקצוע מאז 2020. לא התאחדנו כדי להוכיח משהו על עצמנו, אלא אנחנו כאן למען הציבור הרחב.',
     'story-p2': 'העבודה שלנו היא ברורה: לגרום לכם לשמוח ולזכור כל אירוע שיש לכם כאירוע הכי טוב בחיים שלכם. אנחנו רק אמצעי להגשים את המטרה וכדי לתת עוד פריצת שמחה ברגעים היפים שלכם. אומרים שאלכוהול מחבר בין אנשים, וכך גם אנחנו באים לחבר את הקהל שלכם בצורה הכי מדויקת שניתן לעשות זאת.',
     'story-btn': 'למדו עוד',
-    // Services
+    // Services (homepage)
     'services-title': 'שירותי הבר שלנו',
     'svc-weddings-btn': 'בר קוקטיילים לחתונות',
     'svc-weddings-desc': 'חווית קוקטיילים יוקרתית המותאמת אישית לכל סוג של אירוע, עם דגש על איכות ושירות ללא פשרות.',
@@ -24,6 +24,57 @@ const translations = {
     'svc-events-desc': 'הופכים את היום המיוחד שלכם לחגיגה של טעמים וסטייל עם תפריט קוקטיילים מעוצב ומרגש.',
     'svc-corporate-btn': 'אירועי חברה',
     'svc-corporate-desc': 'מיתוג מושלם ואווירה מנצחת לאירוע החברה שלכם, עם קוקטיילים יצירתיים שכולם ידברו עליהם.',
+    // Weddings page
+    'wed-hero-title': 'בר קוקטיילים לחתונות',
+    'wed-hero-subtitle': 'חווית קוקטיילים יוקרתית שתהפוך את היום המיוחד שלכם לבלתי נשכח',
+    'wed-hero-cta': 'קבלו הצעת מחיר',
+    'wed-desc-title': 'החתונה שלכם, הקוקטיילים שלנו',
+    'wed-desc-p1': 'אנחנו מאמינים שכל חתונה היא סיפור ייחודי, וכך גם הקוקטיילים שלנו. צוות הברמנים המקצועי שלנו יעבוד איתכם כדי ליצור תפריט קוקטיילים מותאם אישית שמשקף את הסגנון והאישיות שלכם.',
+    'wed-desc-p2': 'מקוקטיילים קלאסיים ועד יצירות מקוריות, אנחנו מביאים את הניסיון, היצירתיות והמקצועיות שהופכים כל אירוע לחגיגה של טעמים. הבר שלנו הוא לא רק משקאות — הוא חוויה שלמה שהאורחים שלכם ידברו עליה עוד שנים.',
+    'wed-feat-title': 'למה לבחור בנו לחתונה שלכם',
+    'wed-feat1-title': 'תפריט קוקטיילים מותאם אישית',
+    'wed-feat1-desc': 'נבנה יחד תפריט שמשלב את הטעמים האהובים עליכם עם יצירות מקוריות שיפתיעו את האורחים.',
+    'wed-feat2-title': 'צוות ברמנים מקצועי',
+    'wed-feat2-desc': 'ברמנים מנוסים עם ניסיון בעשרות חתונות, שמביאים אנרגיה ושירות ברמה הגבוהה ביותר.',
+    'wed-feat3-title': 'עיצוב בר אלגנטי',
+    'wed-feat3-desc': 'עמדת בר מעוצבת שמשתלבת בקונספט של החתונה שלכם ומוסיפה נופך של יוקרה לאירוע.',
+    'wed-gallery-title': 'מהחתונות שלנו',
+    'wed-testimonial-quote': '\u201Cפול וגרג הפכו את החתונה שלנו לחוויה בלתי נשכחת. הקוקטיילים היו מושלמים והשירות היה יוצא מן הכלל. כל האורחים שלנו עדיין מדברים על זה!\u201D',
+    'wed-testimonial-author': '\u2014 שרה ודניאל, חתונה 2025',
+    // Events page
+    'evt-hero-title': 'אירועים פרטיים',
+    'evt-hero-subtitle': 'הפכו כל רגע לחגיגה עם שירות בר קוקטיילים מותאם אישית',
+    'evt-hero-cta': 'קבלו הצעת מחיר',
+    'evt-desc-title': 'האירוע שלכם, החוויה שלנו',
+    'evt-desc-p1': 'בין אם מדובר ביום הולדת מיוחד, מסיבת רווקים, או כל אירוע פרטי אחר — אנחנו מביאים את חווית הבר ישירות אליכם. כל אירוע מקבל יחס אישי ותפריט שנבנה במיוחד עבורכם.',
+    'evt-desc-p2': 'הצוות שלנו מתאים את עצמו לכל סגנון ואווירה — ממסיבה אינטימית ועד חגיגה גדולה. עם חומרי גלם פרימיום וקוקטיילים יצירתיים, האורחים שלכם ייהנו מחוויה שאי אפשר לשכוח.',
+    'evt-feat-title': 'מה אנחנו מציעים',
+    'evt-feat1-title': 'חוויה אישית',
+    'evt-feat1-desc': 'כל אירוע מתוכנן עד הפרט האחרון בהתאם לרצונות שלכם, מהתפריט ועד האווירה.',
+    'evt-feat2-title': 'חבילות גמישות',
+    'evt-feat2-desc': 'מגוון חבילות שמתאימות לכל תקציב וגודל אירוע, עם אפשרות להתאמה מלאה.',
+    'evt-feat3-title': 'חומרי גלם פרימיום',
+    'evt-feat3-desc': 'משקאות ומרכיבים באיכות הגבוהה ביותר, לקוקטיילים שנראים ונטעמים מדהים.',
+    'evt-gallery-title': 'מהאירועים שלנו',
+    'evt-testimonial-quote': '\u201Cהזמנו את פול וגרג למסיבת יום ההולדת שלי וזו הייתה ההחלטה הכי טובה! הקוקטיילים היו מדהימים והאווירה הייתה פשוט מושלמת.\u201D',
+    'evt-testimonial-author': '\u2014 מיכל כ., מסיבת יום הולדת 30',
+    // Corporate page
+    'corp-hero-title': 'אירועי חברה',
+    'corp-hero-subtitle': 'מיתוג מושלם ואווירה מנצחת לאירוע החברה שלכם',
+    'corp-hero-cta': 'קבלו הצעת מחיר',
+    'corp-desc-title': 'הרמת כוסית ברמה אחרת',
+    'corp-desc-p1': 'אירוע חברה מוצלח הוא הרבה יותר מפגישה עסקית — הוא הזדמנות לחזק קשרים, לחגוג הצלחות וליצור זכרונות משותפים. אנחנו מביאים את חווית הבר היוקרתית שלנו ישירות לאירוע שלכם.',
+    'corp-desc-p2': 'מהשקות מוצר ועד ימי גיבוש, כנסים ומסיבות סוף שנה — אנחנו מתאימים את התפריט, העיצוב והשירות למותג ולאופי האירוע שלכם. קוקטיילים ממותגים בצבעי החברה? אפשרי לגמרי.',
+    'corp-feat-title': 'למה חברות בוחרות בנו',
+    'corp-feat1-title': 'קוקטיילים ממותגים',
+    'corp-feat1-desc': 'קוקטיילים בצבעי המותג שלכם, עם אלמנטים עיצוביים שמשקפים את זהות החברה.',
+    'corp-feat2-title': 'שירות בקנה מידה גדול',
+    'corp-feat2-desc': 'ניסיון באירועים של עשרות ועד מאות משתתפים, עם צוות שמותאם לגודל האירוע.',
+    'corp-feat3-title': 'מצגת מקצועית',
+    'corp-feat3-desc': 'הופעה מקצועית ומרשימה שמשדרגת את תדמית החברה בעיני העובדים והלקוחות.',
+    'corp-gallery-title': 'מאירועי החברה שלנו',
+    'corp-testimonial-quote': '\u201Cפול וגרג העניקו לאירוע החברה שלנו נופך מיוחד. הקוקטיילים הממותגים בצבעי החברה היו להיט ענק והצוות היה מקצועי ברמה הגבוהה ביותר.\u201D',
+    'corp-testimonial-author': '\u2014 רון מ., מנהל שיווק, אירוע השקה 2025',
     // Contact form
     'contact-title': 'צרו קשר',
     'contact-subtitle': 'השאירו פרטים ונחזור אליכם בהקדם עם הצעה מנצחת לאירוע שלכם',
@@ -68,14 +119,14 @@ const translations = {
     'nav-cta': 'Contact Us',
     'lang-btn': 'HE',
     'nav-aria': 'Main navigation',
-    // Hero
+    // Hero (homepage)
     'hero-cta': 'Your Event Starts Here',
     // Story
     'story-title': 'Our Story',
-    'story-p1': 'We are Paul & Greg, two friends who turned their passion for cocktails into a profession since 2020. We didn\'t come together to prove something about ourselves — we\'re here for you.',
-    'story-p2': 'Our mission is clear: to make you happy and ensure every event feels like the best one of your life. We are simply a means to bring another burst of joy to your most beautiful moments. They say alcohol brings people together, and that\'s exactly what we do — connect your guests in the most memorable way possible.',
+    'story-p1': 'We are Paul & Greg, two friends who turned their passion for cocktails into a profession since 2020. We didn\'t come together to prove something about ourselves \u2014 we\'re here for you.',
+    'story-p2': 'Our mission is clear: to make you happy and ensure every event feels like the best one of your life. We are simply a means to bring another burst of joy to your most beautiful moments. They say alcohol brings people together, and that\'s exactly what we do \u2014 connect your guests in the most memorable way possible.',
     'story-btn': 'Learn More',
-    // Services
+    // Services (homepage)
     'services-title': 'Our Bar Services',
     'svc-weddings-btn': 'Wedding Cocktail Bar',
     'svc-weddings-desc': 'A premium cocktail experience personally tailored for every type of event, with an emphasis on quality and uncompromising service.',
@@ -83,6 +134,57 @@ const translations = {
     'svc-events-desc': 'Turning your special day into a celebration of flavors and style with a beautifully crafted cocktail menu.',
     'svc-corporate-btn': 'Corporate Events',
     'svc-corporate-desc': 'Perfect branding and a winning atmosphere for your corporate event, with creative cocktails everyone will talk about.',
+    // Weddings page
+    'wed-hero-title': 'Wedding Cocktail Bar',
+    'wed-hero-subtitle': 'A premium cocktail experience that will make your special day unforgettable',
+    'wed-hero-cta': 'Get a Quote',
+    'wed-desc-title': 'Your Wedding, Our Cocktails',
+    'wed-desc-p1': 'We believe every wedding is a unique story, and so are our cocktails. Our professional bartending team will work with you to create a custom cocktail menu that reflects your style and personality.',
+    'wed-desc-p2': 'From classic cocktails to original creations, we bring the experience, creativity, and professionalism that turn every event into a celebration of flavors. Our bar is not just drinks \u2014 it\'s a complete experience your guests will talk about for years.',
+    'wed-feat-title': 'Why Choose Us for Your Wedding',
+    'wed-feat1-title': 'Custom Cocktail Menu',
+    'wed-feat1-desc': 'We\'ll build a menu together that combines your favorite flavors with original creations that will surprise your guests.',
+    'wed-feat2-title': 'Professional Bartender Team',
+    'wed-feat2-desc': 'Experienced bartenders with dozens of weddings under their belt, bringing energy and top-tier service.',
+    'wed-feat3-title': 'Elegant Bar Design',
+    'wed-feat3-desc': 'A beautifully designed bar station that complements your wedding concept and adds a touch of luxury.',
+    'wed-gallery-title': 'From Our Weddings',
+    'wed-testimonial-quote': '\u201CPaul & Greg made our wedding an unforgettable experience. The cocktails were perfect and the service was exceptional. All our guests are still talking about it!\u201D',
+    'wed-testimonial-author': '\u2014 Sarah & Daniel, Wedding 2025',
+    // Events page
+    'evt-hero-title': 'Private Events',
+    'evt-hero-subtitle': 'Turn every moment into a celebration with a personalized cocktail bar service',
+    'evt-hero-cta': 'Get a Quote',
+    'evt-desc-title': 'Your Event, Our Experience',
+    'evt-desc-p1': 'Whether it\'s a special birthday, bachelor party, or any other private event \u2014 we bring the bar experience directly to you. Every event receives personal attention and a menu built especially for you.',
+    'evt-desc-p2': 'Our team adapts to every style and atmosphere \u2014 from an intimate gathering to a grand celebration. With premium ingredients and creative cocktails, your guests will enjoy an unforgettable experience.',
+    'evt-feat-title': 'What We Offer',
+    'evt-feat1-title': 'Personal Experience',
+    'evt-feat1-desc': 'Every event is planned down to the last detail according to your wishes, from the menu to the atmosphere.',
+    'evt-feat2-title': 'Flexible Packages',
+    'evt-feat2-desc': 'A variety of packages that fit every budget and event size, with full customization options.',
+    'evt-feat3-title': 'Premium Ingredients',
+    'evt-feat3-desc': 'The highest quality spirits and ingredients, for cocktails that look and taste amazing.',
+    'evt-gallery-title': 'From Our Events',
+    'evt-testimonial-quote': '\u201CWe hired Paul & Greg for my birthday party and it was the best decision! The cocktails were amazing and the atmosphere was simply perfect.\u201D',
+    'evt-testimonial-author': '\u2014 Michal K., 30th Birthday Party',
+    // Corporate page
+    'corp-hero-title': 'Corporate Events',
+    'corp-hero-subtitle': 'Perfect branding and a winning atmosphere for your corporate event',
+    'corp-hero-cta': 'Get a Quote',
+    'corp-desc-title': 'A Toast on Another Level',
+    'corp-desc-p1': 'A successful corporate event is much more than a business meeting \u2014 it\'s an opportunity to strengthen connections, celebrate achievements, and create shared memories. We bring our premium bar experience directly to your event.',
+    'corp-desc-p2': 'From product launches to team building days, conferences, and year-end parties \u2014 we tailor the menu, design, and service to your brand and event character. Brand-colored cocktails? Absolutely possible.',
+    'corp-feat-title': 'Why Companies Choose Us',
+    'corp-feat1-title': 'Branded Cocktails',
+    'corp-feat1-desc': 'Cocktails in your brand colors, with design elements that reflect your company\'s identity.',
+    'corp-feat2-title': 'Large-Scale Service',
+    'corp-feat2-desc': 'Experience with events from dozens to hundreds of participants, with a team sized to your event.',
+    'corp-feat3-title': 'Professional Presentation',
+    'corp-feat3-desc': 'A professional and impressive appearance that elevates your company\'s image in the eyes of employees and clients.',
+    'corp-gallery-title': 'From Our Corporate Events',
+    'corp-testimonial-quote': '\u201CPaul & Greg gave our corporate event a special touch. The brand-colored cocktails were a huge hit and the team was professional at the highest level.\u201D',
+    'corp-testimonial-author': '\u2014 Ron M., Marketing Manager, Launch Event 2025',
     // Contact form
     'contact-title': 'Contact Us',
     'contact-subtitle': 'Leave your details and we\'ll get back to you shortly with a winning offer for your event',
@@ -185,33 +287,35 @@ window.addEventListener('resize', () => {
   heroHeight = hero.offsetHeight;
 }, { passive: true });
 
-// Services accordion — expand/collapse on hover (desktop only)
+// Services accordion — expand/collapse on hover (desktop only, homepage only)
 const accordion = document.getElementById('services-accordion');
-const cardData = Array.from(accordion.querySelectorAll('.service-card')).map(card => ({
-  card,
-  overlay: card.querySelector('.card-overlay'),
-  img: card.querySelector('img'),
-}));
+if (accordion) {
+  const cardData = Array.from(accordion.querySelectorAll('.service-card')).map(card => ({
+    card,
+    overlay: card.querySelector('.card-overlay'),
+    img: card.querySelector('img'),
+  }));
 
-function setActiveCard(activeIndex) {
-  cardData.forEach(({ card, overlay, img }, i) => {
-    if (i === activeIndex) {
-      card.style.flex = '0 0 850px';
-      card.classList.add('active');
-      overlay.style.opacity = '1';
-      img.style.transform = 'scale(1.05)';
-    } else {
-      card.style.flex = '0 0 150px';
-      card.classList.remove('active');
-      overlay.style.opacity = '0';
-      img.style.transform = 'scale(1)';
-    }
-  });
-}
+  function setActiveCard(activeIndex) {
+    cardData.forEach(({ card, overlay, img }, i) => {
+      if (i === activeIndex) {
+        card.style.flex = '0 0 850px';
+        card.classList.add('active');
+        overlay.style.opacity = '1';
+        img.style.transform = 'scale(1.05)';
+      } else {
+        card.style.flex = '0 0 150px';
+        card.classList.remove('active');
+        overlay.style.opacity = '0';
+        img.style.transform = 'scale(1)';
+      }
+    });
+  }
 
-if (window.innerWidth >= 768) {
-  cardData.forEach(({ card }, i) => {
-    card.addEventListener('mouseenter', () => setActiveCard(i));
-  });
-  accordion.addEventListener('mouseleave', () => setActiveCard(1));
+  if (window.innerWidth >= 768) {
+    cardData.forEach(({ card }, i) => {
+      card.addEventListener('mouseenter', () => setActiveCard(i));
+    });
+    accordion.addEventListener('mouseleave', () => setActiveCard(1));
+  }
 }
