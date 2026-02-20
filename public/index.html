@@ -82,7 +82,7 @@
         }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300">
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300 min-h-screen flex flex-col">
 <nav id="sticky-header" class="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 shadow-sm z-[60] transition-transform duration-300 -translate-y-full" dir="rtl">
 <div class="container mx-auto px-6 flex items-center justify-between h-44">
 <div class="flex items-center gap-8">
@@ -108,6 +108,7 @@ EN
 </div>
 </div>
 </nav>
+<main class="flex-grow">
 <header id="hero-section" class="relative h-screen w-full flex flex-col items-center justify-center bg-brand-bg dark:bg-background-dark text-primary px-4 overflow-hidden">
 <div class="z-10 text-center max-w-4xl mx-auto space-y-4 fade-in-up flex flex-col items-center">
 <div class="mb-4 relative">
@@ -241,54 +242,54 @@ EN
         </div>
     </section>
 
-    <footer class="bg-primary text-white py-16" dir="rtl">
-<div class="container mx-auto px-6">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-right border-b border-white/20 pb-12">
-<div class="space-y-4">
-<h4 class="text-lg font-bold border-b border-white/20 pb-2 inline-block md:block mb-4">השירותים שלנו</h4>
-<ul class="space-y-2 text-sm font-light text-gray-200">
+</main>
+    <footer class="bg-primary text-white flex-shrink-0" dir="rtl" style="height:425px">
+<div class="container mx-auto px-6 h-full flex flex-col justify-center pt-12">
+<div class="grid grid-cols-1 md:grid-cols-4 md:items-start gap-6 text-center md:text-right pb-4">
+<!-- Column 1 (RTL rightmost): Logo -->
+<div class="flex flex-col items-center w-fit mx-auto md:mx-0">
+<picture>
+<source srcset="/logo.webp" type="image/webp" />
+<img alt="Paul & Greg" src="/logo.png" class="w-28 brightness-0 invert" width="1250" height="1250" loading="lazy" decoding="async" />
+</picture>
+<div class="text-xs uppercase tracking-widest opacity-80 mt-1">Bar &amp; Cocktails</div>
+</div>
+<!-- Column 2 (RTL middle-right): השירותים שלנו -->
+<div class="space-y-2 w-fit mx-auto md:mx-0 md:mt-14">
+<h4 class="text-base font-bold border-b border-white/20 pb-1 inline-block md:block mb-2">השירותים שלנו</h4>
+<ul class="space-y-1 text-sm font-light text-gray-200">
 <li><a class="hover:text-white transition" href="#">שירותי בר לאירועים</a></li>
 <li><a class="hover:text-white transition" href="#">בר קוקטיילים</a></li>
 <li><a class="hover:text-white transition" href="#">סדנת קוקטיילים</a></li>
 <li><a class="hover:text-white transition" href="#">מפת אתר</a></li>
 </ul>
 </div>
-<div class="space-y-4">
-<h4 class="text-lg font-bold border-b border-white/20 pb-2 inline-block md:block mb-4">צרו קשר</h4>
-<ul class="space-y-2 text-sm font-light text-gray-200">
+<!-- Column 3 (RTL middle-left): צרו קשר -->
+<div class="space-y-2 w-fit mx-auto md:mx-0 md:mt-14">
+<h4 class="text-base font-bold border-b border-white/20 pb-1 inline-block md:block mb-2">צרו קשר</h4>
+<ul class="space-y-1 text-sm font-light text-gray-200">
 <li>טלפון: <a class="hover:text-white transition" dir="ltr" href="tel:054-721-3544">054-721-3544</a></li>
 <li>אימייל: <a class="hover:text-white transition" href="mailto:sales@paulandgreg.co.il">sales@paulandgreg.co.il</a></li>
 </ul>
 </div>
-<div class="space-y-4">
-<h4 class="text-lg font-bold border-b border-white/20 pb-2 inline-block md:block mb-4">עקבו אחרינו</h4>
-<ul class="space-y-2 text-sm font-light text-gray-200">
+<!-- Column 4 (RTL leftmost): עקבו אחרינו -->
+<div class="space-y-2 w-fit mx-auto md:mx-0 md:mt-14">
+<h4 class="text-base font-bold border-b border-white/20 pb-1 inline-block md:block mb-2">עקבו אחרינו</h4>
+<ul class="space-y-1 text-sm font-light text-gray-200">
 <li><a class="hover:text-white transition" href="#">הבלוג של פול וגרג</a></li>
 <li><a class="hover:text-white transition" href="#">פייסבוק | Paul_and_Greg_cocktail_events</a></li>
 <li><a class="hover:text-white transition" href="#">אינסטגרם | PAUL &amp; GREG EVENTS</a></li>
 <li><a class="hover:text-white transition" href="#">מפת אתר</a></li>
 </ul>
-<div class="mt-4 flex items-center gap-2">
+<div class="mt-2 flex items-center gap-2">
 <input class="bg-transparent border-b border-white/40 text-white text-sm focus:outline-none focus:border-white w-full py-1 placeholder-gray-300" placeholder="אימייל" type="email"/>
 <button class="bg-white text-primary px-4 py-1 text-xs rounded-full hover:bg-gray-100 transition font-bold">שליחה</button>
 </div>
 </div>
-<div class="flex flex-col items-center md:items-start justify-center">
-<picture>
-<source srcset="/logo.webp" type="image/webp" />
-<img alt="Paul & Greg" src="/logo.png" class="w-32 brightness-0 invert" width="1250" height="1250" loading="lazy" decoding="async" />
-</picture>
-<div class="text-xs uppercase tracking-widest opacity-80 mt-2">Bar &amp; Cocktails</div>
 </div>
-</div>
-<div class="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-300 font-light">
-<div class="flex items-center gap-4 mb-4 md:mb-0">
-<span>כל הזכויות שמורות לפול וגרג בע"מ</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="material-icons text-lg">accessible</span>
-<span>נגישות</span>
-</div>
+<!-- Copyright Section -->
+<div class="pt-4 text-center text-xs text-gray-300 font-light">
+<span>כל הזכויות שמורות לפול וגרג בע"מ &copy; 2025</span>
 </div>
 </div>
 </footer>
