@@ -10,18 +10,14 @@ module.exports = {
         extend: {
             colors: {
                 primary: "#5A6337",
-                secondary: "#D4AF37",
                 "brand-bg": "#EFE6DE",
                 "background-light": "#FFFFFF",
                 "background-dark": "#0A1128",
                 "text-light": "#333333",
                 "text-dark": "#F3F4F6",
-                "accent-gray": "#F5F5F5",
             },
             fontFamily: {
-                serif: ["'Playfair Display'", "serif"],
-                sans: ["'Heebo'", "sans-serif"],
-                script: ["'Great Vibes'", "cursive"],
+                sans: ['"Noto Sans Hebrew"', "sans-serif"],
             },
             borderRadius: {
                 DEFAULT: "0.25rem",

@@ -27,7 +27,7 @@ app.use(compression());
 app.use((req, res, next) => {
   if (req.path === '/' || req.path.endsWith('.html')) {
     res.setHeader('Link', [
-      '</tailwind.css>; rel=preload; as=style',
+      '</tailwind.css?v=4>; rel=preload; as=style',
       '</logo.webp>; rel=preload; as=image; type=image/webp',
       '<https://fonts.googleapis.com>; rel=preconnect',
       '<https://fonts.gstatic.com>; rel=preconnect; crossorigin',
@@ -42,18 +42,16 @@ app.use(express.static(path.join(__dirname, 'public'), {
   lastModified: true,
   setHeaders(res, filePath) {
     if (filePath.endsWith('.html')) {
-      // HTML: always revalidate so users get fresh content
       res.setHeader('Cache-Control', 'no-cache');
     } else {
-      // Assets: 1-year immutable cache (filenames don't change, but Tailwind rebuild produces same name)
       res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
     }
   },
 }));
 
-// Fallback: any unknown path → index.html (single-page behaviour)
+// 404 — redirect to homepage instead of serving index.html as 404 content
 app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.redirect(301, '/');
 });
 
 app.listen(PORT, '0.0.0.0', () => {
