@@ -23,6 +23,19 @@ app.use(helmet({
 // Gzip compression
 app.use(compression());
 
+// Early preload hints — browser starts fetching before HTML is parsed
+app.use((req, res, next) => {
+  if (req.path === '/' || req.path.endsWith('.html')) {
+    res.setHeader('Link', [
+      '</tailwind.css>; rel=preload; as=style',
+      '</logo.webp>; rel=preload; as=image; type=image/webp',
+      '<https://fonts.googleapis.com>; rel=preconnect',
+      '<https://fonts.gstatic.com>; rel=preconnect; crossorigin',
+    ].join(', '));
+  }
+  next();
+});
+
 // Static files with production-grade cache headers
 app.use(express.static(path.join(__dirname, 'public'), {
   etag: true,
