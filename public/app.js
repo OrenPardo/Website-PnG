@@ -109,6 +109,8 @@ const translations = {
     // WhatsApp
     'whatsapp-text': 'לדבר איתנו בוואטסאפ',
     'whatsapp-aria': 'צרו קשר בוואטסאפ',
+    // Skip link
+    'skip-link': 'דלג לתוכן הראשי',
   },
   en: {
     // Nav
@@ -219,8 +221,20 @@ const translations = {
     // WhatsApp
     'whatsapp-text': 'Chat with us on WhatsApp',
     'whatsapp-aria': 'Contact us on WhatsApp',
+    // Skip link
+    'skip-link': 'Skip to main content',
   }
 };
+
+// WCAG 4.1.3 — Aria-live region for language change announcements
+const langLiveRegion = document.createElement('div');
+langLiveRegion.id = 'lang-live-region';
+langLiveRegion.setAttribute('aria-live', 'polite');
+langLiveRegion.setAttribute('aria-atomic', 'true');
+langLiveRegion.style.cssText = 'position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0';
+document.body.appendChild(langLiveRegion);
+
+let isInitialLoad = true;
 
 function switchLanguage(lang) {
   const t = translations[lang];
@@ -247,6 +261,15 @@ function switchLanguage(lang) {
   document.documentElement.lang = lang;
   // Save preference
   localStorage.setItem('lang', lang);
+  // Announce language change to screen readers (skip initial page load)
+  if (!isInitialLoad) {
+    langLiveRegion.textContent = '';
+    requestAnimationFrame(() => {
+      langLiveRegion.textContent = lang === 'he'
+        ? 'השפה שונתה לעברית'
+        : 'Language changed to English';
+    });
+  }
 }
 
 // Apply saved language on load
@@ -254,6 +277,7 @@ const savedLang = localStorage.getItem('lang');
 if (savedLang && savedLang !== 'he') {
   switchLanguage(savedLang);
 }
+isInitialLoad = false;
 
 // Language button click handler
 document.getElementById('lang-btn').addEventListener('click', () => {
@@ -301,11 +325,13 @@ if (accordion) {
       if (i === activeIndex) {
         card.style.flex = '0 0 850px';
         card.classList.add('active');
+        card.setAttribute('aria-expanded', 'true');
         overlay.style.opacity = '1';
         img.style.transform = 'scale(1.05)';
       } else {
         card.style.flex = '0 0 150px';
         card.classList.remove('active');
+        card.setAttribute('aria-expanded', 'false');
         overlay.style.opacity = '0';
         img.style.transform = 'scale(1)';
       }
@@ -315,7 +341,20 @@ if (accordion) {
   if (window.innerWidth >= 768) {
     cardData.forEach(({ card }, i) => {
       card.addEventListener('mouseenter', () => setActiveCard(i));
+      card.addEventListener('focus', () => setActiveCard(i));
     });
     accordion.addEventListener('mouseleave', () => setActiveCard(1));
   }
+
+  // Keyboard support for accordion cards
+  cardData.forEach(({ card }, i) => {
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        setActiveCard(i);
+        const link = card.querySelector('a[href]');
+        if (link) link.click();
+      }
+    });
+  });
 }

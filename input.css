@@ -21,3 +21,70 @@
 /* GPU acceleration hints for animated elements */
 .service-card img { will-change: transform; }
 .card-overlay { will-change: opacity; }
+
+/* WCAG 2.4.1 — Skip link (visible on focus) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 100;
+}
+.skip-link:focus {
+  position: fixed;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  padding: 12px 24px;
+  background: #5A6337;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  z-index: 9999;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* WCAG 2.4.7 — Global focus-visible fallback */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #5A6337;
+  outline-offset: 2px;
+}
+
+/* WCAG 2.4.11 — Prevent sticky header from obscuring focused elements */
+:target,
+section,
+[tabindex],
+a,
+button,
+input,
+select,
+textarea {
+  scroll-margin-top: 12rem;
+}
+
+/* WCAG 2.3.3 — Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .fade-in-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
