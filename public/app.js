@@ -3,7 +3,7 @@ const translations = {
   he: {
     // Nav
     'nav-story': 'הסיפור שלנו',
-    'nav-weddings': 'בר קוקטיילים לחתונות',
+    'nav-weddings': 'חתונות וקבלות פנים',
     'nav-events': 'אירועים פרטיים',
     'nav-corporate': 'אירועי חברה',
     'nav-cta': 'יצירת קשר',
@@ -18,12 +18,12 @@ const translations = {
     'story-btn': 'למדו עוד',
     // Services (homepage)
     'services-title': 'שירותי הבר שלנו',
-    'svc-weddings-btn': 'בר קוקטיילים לחתונות',
-    'svc-weddings-desc': 'חווית קוקטיילים יוקרתית המותאמת אישית לכל סוג של אירוע, עם דגש על איכות ושירות ללא פשרות.',
+    'svc-weddings-btn': 'חתונות וקבלות פנים',
     'svc-events-btn': 'אירועים פרטיים',
-    'svc-events-desc': 'הופכים את היום המיוחד שלכם לחגיגה של טעמים וסטייל עם תפריט קוקטיילים מעוצב ומרגש.',
     'svc-corporate-btn': 'אירועי חברה',
-    'svc-corporate-desc': 'מיתוג מושלם ואווירה מנצחת לאירוע החברה שלכם, עם קוקטיילים יצירתיים שכולם ידברו עליהם.',
+    // Gallery (homepage)
+    'gallery-title': 'מהגלריה שלנו',
+    'gallery-cta': 'עקבו אחרינו באינסטגרם',
     // Weddings page
     'wed-hero-title': 'בר קוקטיילים לחתונות',
     'wed-hero-subtitle': 'חווית קוקטיילים יוקרתית שתהפוך את היום המיוחד שלכם לבלתי נשכח',
@@ -77,13 +77,22 @@ const translations = {
     'corp-testimonial-author': '\u2014 רון מ., מנהל שיווק, אירוע השקה 2025',
     // Contact form
     'contact-title': 'צרו קשר',
-    'contact-subtitle': 'השאירו פרטים ונחזור אליכם בהקדם עם הצעה מנצחת לאירוע שלכם',
+    'contact-subtitle': 'השאירו פרטים ונחזור אליכם בהקדם',
+    'contact-direct': 'ליצירת קשר ישיר',
+    'contact-whatsapp': 'לשיחה בוואטסאפ',
+    'contact-follow': 'עקבו אחרינו',
     'contact-name': 'שם מלא',
     'contact-phone': 'טלפון',
     'contact-email': 'אימייל',
     'contact-event-type': 'סוג האירוע',
     'contact-message': 'הודעה',
     'contact-submit': 'שליחת הודעה',
+    'contact-success-title': 'ההודעה נשלחה בהצלחה!',
+    'contact-success-desc': 'נחזור אליך בהקדם האפשרי',
+    'err-name': 'נא למלא שם מלא',
+    'err-phone-email': 'נא למלא טלפון או אימייל',
+    'err-email-invalid': 'נא להזין כתובת אימייל תקינה',
+    'err-message': 'נא לכתוב הודעה של לפחות 10 תווים',
     'opt-wedding': 'חתונה',
     'opt-corporate': 'אירוע חברה',
     'opt-birthday': 'יום הולדת / מסיבה פרטית',
@@ -95,7 +104,7 @@ const translations = {
     'ph-message': 'ספרו לנו קצת על האירוע שלכם...',
     // Footer
     'footer-services': 'השירותים שלנו',
-    'footer-weddings': 'בר קוקטיילים לחתונות',
+    'footer-weddings': 'חתונות וקבלות פנים',
     'footer-events': 'אירועים פרטיים',
     'footer-corporate': 'אירועי חברה',
     'footer-follow': 'עקבו אחרינו',
@@ -107,7 +116,7 @@ const translations = {
     'footer-email-label': 'אימייל:',
     'footer-copyright': 'כל הזכויות שמורות לפול וגרג בע"מ \u00A9 2026',
     // WhatsApp
-    'whatsapp-text': 'לדבר איתנו בוואטסאפ',
+    'whatsapp-text': 'לתיאום אירוע בוואטסאפ',
     'whatsapp-aria': 'צרו קשר בוואטסאפ',
     // Skip link
     'skip-link': 'דלג לתוכן הראשי',
@@ -115,7 +124,7 @@ const translations = {
   en: {
     // Nav
     'nav-story': 'Our Story',
-    'nav-weddings': 'Wedding Cocktail Bar',
+    'nav-weddings': 'Weddings & Receptions',
     'nav-events': 'Private Events',
     'nav-corporate': 'Corporate Events',
     'nav-cta': 'Contact Us',
@@ -130,12 +139,12 @@ const translations = {
     'story-btn': 'Learn More',
     // Services (homepage)
     'services-title': 'Our Bar Services',
-    'svc-weddings-btn': 'Wedding Cocktail Bar',
-    'svc-weddings-desc': 'A premium cocktail experience personally tailored for every type of event, with an emphasis on quality and uncompromising service.',
+    'svc-weddings-btn': 'Weddings & Receptions',
     'svc-events-btn': 'Private Events',
-    'svc-events-desc': 'Turning your special day into a celebration of flavors and style with a beautifully crafted cocktail menu.',
     'svc-corporate-btn': 'Corporate Events',
-    'svc-corporate-desc': 'Perfect branding and a winning atmosphere for your corporate event, with creative cocktails everyone will talk about.',
+    // Gallery (homepage)
+    'gallery-title': 'From Our Gallery',
+    'gallery-cta': 'Follow Us on Instagram',
     // Weddings page
     'wed-hero-title': 'Wedding Cocktail Bar',
     'wed-hero-subtitle': 'A premium cocktail experience that will make your special day unforgettable',
@@ -189,13 +198,22 @@ const translations = {
     'corp-testimonial-author': '\u2014 Ron M., Marketing Manager, Launch Event 2025',
     // Contact form
     'contact-title': 'Contact Us',
-    'contact-subtitle': 'Leave your details and we\'ll get back to you shortly with a winning offer for your event',
+    'contact-subtitle': 'Leave your details and we\'ll get back to you shortly',
+    'contact-direct': 'Direct Contact',
+    'contact-whatsapp': 'Chat on WhatsApp',
+    'contact-follow': 'Follow Us',
     'contact-name': 'Full Name',
     'contact-phone': 'Phone',
     'contact-email': 'Email',
     'contact-event-type': 'Event Type',
     'contact-message': 'Message',
     'contact-submit': 'Send Message',
+    'contact-success-title': 'Message sent successfully!',
+    'contact-success-desc': 'We\'ll get back to you as soon as possible',
+    'err-name': 'Please enter your full name',
+    'err-phone-email': 'Please enter a phone number or email',
+    'err-email-invalid': 'Please enter a valid email address',
+    'err-message': 'Please write a message of at least 10 characters',
     'opt-wedding': 'Wedding',
     'opt-corporate': 'Corporate Event',
     'opt-birthday': 'Birthday / Private Party',
@@ -207,7 +225,7 @@ const translations = {
     'ph-message': 'Tell us a bit about your event...',
     // Footer
     'footer-services': 'Our Services',
-    'footer-weddings': 'Wedding Cocktail Bar',
+    'footer-weddings': 'Weddings & Receptions',
     'footer-events': 'Private Events',
     'footer-corporate': 'Corporate Events',
     'footer-follow': 'Follow Us',
@@ -219,7 +237,7 @@ const translations = {
     'footer-email-label': 'Email:',
     'footer-copyright': 'All rights reserved to Paul & Greg Ltd. \u00A9 2026',
     // WhatsApp
-    'whatsapp-text': 'Chat with us on WhatsApp',
+    'whatsapp-text': 'Book an event on WhatsApp',
     'whatsapp-aria': 'Contact us on WhatsApp',
     // Skip link
     'skip-link': 'Skip to main content',
@@ -316,25 +334,31 @@ const accordion = document.getElementById('services-accordion');
 if (accordion) {
   const cardData = Array.from(accordion.querySelectorAll('.service-card')).map(card => ({
     card,
-    overlay: card.querySelector('.card-overlay'),
     img: card.querySelector('img'),
   }));
 
   function setActiveCard(activeIndex) {
-    cardData.forEach(({ card, overlay, img }, i) => {
+    cardData.forEach(({ card, img }, i) => {
       if (i === activeIndex) {
         card.style.flex = '0 0 850px';
         card.classList.add('active');
         card.setAttribute('aria-expanded', 'true');
-        overlay.style.opacity = '1';
         img.style.transform = 'scale(1.05)';
       } else {
         card.style.flex = '0 0 150px';
         card.classList.remove('active');
         card.setAttribute('aria-expanded', 'false');
-        overlay.style.opacity = '0';
         img.style.transform = 'scale(1)';
       }
+    });
+  }
+
+  function resetAllCards() {
+    cardData.forEach(({ card, img }) => {
+      card.style.flex = '0 0 150px';
+      card.classList.remove('active');
+      card.setAttribute('aria-expanded', 'false');
+      img.style.transform = 'scale(1)';
     });
   }
 
@@ -343,18 +367,85 @@ if (accordion) {
       card.addEventListener('mouseenter', () => setActiveCard(i));
       card.addEventListener('focus', () => setActiveCard(i));
     });
-    accordion.addEventListener('mouseleave', () => setActiveCard(1));
+    accordion.addEventListener('mouseleave', () => resetAllCards());
+  }
+}
+
+// Contact form validation
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  const nameInput = document.getElementById('contact-name');
+  const phoneInput = document.getElementById('contact-phone');
+  const emailInput = document.getElementById('contact-email');
+  const messageInput = document.getElementById('contact-message');
+  const successEl = document.getElementById('contact-success');
+
+  function showError(input, errorEl) {
+    input.classList.add('input-error');
+    errorEl.classList.remove('hidden');
   }
 
-  // Keyboard support for accordion cards
-  cardData.forEach(({ card }, i) => {
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        setActiveCard(i);
-        const link = card.querySelector('a[href]');
-        if (link) link.click();
-      }
-    });
+  function clearError(input, errorEl) {
+    input.classList.remove('input-error');
+    errorEl.classList.add('hidden');
+  }
+
+  // Clear errors on input
+  [nameInput, phoneInput, emailInput, messageInput].forEach(input => {
+    if (!input) return;
+    const errorEl = input.closest('div')?.querySelector('.form-error');
+    if (errorEl) {
+      input.addEventListener('input', () => clearError(input, errorEl));
+    }
+  });
+
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    let valid = true;
+
+    // Validate name
+    const nameError = nameInput.closest('div').querySelector('.form-error');
+    if (!nameInput.value.trim()) {
+      showError(nameInput, nameError);
+      valid = false;
+    } else {
+      clearError(nameInput, nameError);
+    }
+
+    // Validate phone or email (at least one required)
+    const phone = phoneInput.value.trim();
+    const email = emailInput.value.trim();
+    const phoneError = phoneInput.closest('div').querySelector('.form-error');
+    const emailError = emailInput.closest('div').querySelector('.form-error');
+
+    if (!phone && !email) {
+      showError(phoneInput, phoneError);
+      valid = false;
+    } else {
+      clearError(phoneInput, phoneError);
+    }
+
+    // Validate email format if provided
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showError(emailInput, emailError);
+      valid = false;
+    } else {
+      clearError(emailInput, emailError);
+    }
+
+    // Validate message (at least 10 chars)
+    const msgError = messageInput.closest('div').querySelector('.form-error');
+    if (messageInput.value.trim().length < 10) {
+      showError(messageInput, msgError);
+      valid = false;
+    } else {
+      clearError(messageInput, msgError);
+    }
+
+    if (!valid) return;
+
+    // Success — hide form, show success message
+    contactForm.classList.add('hidden');
+    successEl.classList.remove('hidden');
   });
 }
