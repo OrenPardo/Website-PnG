@@ -27,6 +27,7 @@ const pages = {
   events: renderHtml('events.html'),
   corporate: renderHtml('corporate.html'),
   drinks: renderHtml('drinks.html'),
+  oldFashioned: renderHtml('old-fashioned.html'),
 };
 
 // Security headers
@@ -52,7 +53,7 @@ app.use(compression());
 
 // Early preload hints — browser starts fetching before HTML is parsed
 app.use((req, res, next) => {
-  if (['/', '/weddings', '/events', '/corporate', '/drinks'].includes(req.path)) {
+  if (['/', '/weddings', '/events', '/corporate', '/drinks', '/drinks/old-fashioned'].includes(req.path)) {
     res.setHeader('Link', [
       `</tailwind.css?v=${cssHash}>; rel=preload; as=style`,
       '</logo.webp>; rel=preload; as=image; type=image/webp',
@@ -77,6 +78,7 @@ app.get('/weddings', servePage(pages.weddings));
 app.get('/events', servePage(pages.events));
 app.get('/corporate', servePage(pages.corporate));
 app.get('/drinks', servePage(pages.drinks));
+app.get('/drinks/old-fashioned', servePage(pages.oldFashioned));
 
 // Static files with production-grade cache headers
 app.use(express.static(path.join(__dirname, 'public'), {
