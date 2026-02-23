@@ -536,7 +536,7 @@ if (accordion) {
   function setActiveCard(activeIndex) {
     cardData.forEach(({ card, img }, i) => {
       if (i === activeIndex) {
-        card.style.flex = '0 0 850px';
+        card.style.flex = '1 1 0%';
         card.classList.add('active');
         card.setAttribute('aria-expanded', 'true');
         img.style.transform = 'scale(1.05)';
@@ -551,7 +551,7 @@ if (accordion) {
 
   function resetAllCards() {
     cardData.forEach(({ card, img }) => {
-      card.style.flex = '0 0 150px';
+      card.style.flex = '1 1 0%';
       card.classList.remove('active');
       card.setAttribute('aria-expanded', 'false');
       img.style.transform = 'scale(1)';
