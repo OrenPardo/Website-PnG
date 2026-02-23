@@ -95,6 +95,53 @@ textarea {
 /* Form error border */
 .input-error { border-color: #ef4444 !important; }
 
+/* Bento grid for drinks page */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .bento-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1024px) {
+  .bento-grid { grid-template-columns: repeat(4, 1fr); }
+}
+.bento-span-2 { grid-column: span 2; }
+
+/* Frosted glass overlay on drink cards */
+.drink-card .drink-overlay {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.55);
+}
+.drink-card:hover .drink-overlay,
+.drink-card.touch-active .drink-overlay {
+  opacity: 1;
+}
+
+/* Category filter hide */
+.filter-hidden {
+  display: none !important;
+}
+
+/* Scrollbar hide for horizontal filter bar */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Hero shimmer effect */
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.06), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
 /* WCAG 2.3.3 — Respect prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   *,

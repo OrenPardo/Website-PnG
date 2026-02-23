@@ -78,6 +78,66 @@ const translations = {
     'corp-gallery-title': 'מאירועי החברה שלנו',
     'corp-testimonial-quote': '\u201Cפול וגרג העניקו לאירוע החברה שלנו נופך מיוחד. הקוקטיילים הממותגים בצבעי החברה היו להיט ענק והצוות היה מקצועי ברמה הגבוהה ביותר.\u201D',
     'corp-testimonial-author': '\u2014 רון מ., מנהל שיווק, אירוע השקה 2025',
+    // Drinks page
+    'nav-drinks': 'הדרינקים',
+    'footer-drinks': 'הדרינקים',
+    'drinks-hero-title': 'הקולקציה',
+    'drinks-hero-subtitle': 'המשקאות שאנחנו הכי אוהבים להכין, וכאלו שפשוט חייבים להכיר',
+    'drinks-filter-all': 'הכל',
+    'drinks-filter-classics': 'קלאסיקות',
+    'drinks-filter-tropical': 'טרופיים',
+    'drinks-filter-modern': 'מודרניים',
+    'drinks-filter-specials': 'ספיישלס',
+    'drink-1-name': 'אולד פאשנד',
+    'drink-1-ing': 'בורבון · סוכר · ביטרס · קליפת תפוז',
+    'drink-1-desc': 'הקוקטייל שהתחיל את הכל. אלגנטי, חזק, ובלי שטויות — בדיוק כמו שצריך.',
+    'drink-2-name': 'נגרוני',
+    'drink-2-ing': "ג'ין · קמפרי · ורמוט מתוק",
+    'drink-2-desc': 'מר, מתוק, ומורכב — הקוקטייל האיטלקי שכבש את העולם.',
+    'drink-3-name': 'מרטיני',
+    'drink-3-ing': "ג'ין · ורמוט יבש · זית / לימון",
+    'drink-3-desc': "מזוקק, מינימליסטי ואלגנטי. ג'יימס בונד ידע מה הוא עושה.",
+    'drink-4-name': 'מנהטן',
+    'drink-4-ing': 'ויסקי · ורמוט מתוק · ביטרס · דובדבן',
+    'drink-4-desc': 'הקלאסיקה הניו-יורקית. חלק, עשיר, ועם אופי שלא מפספסים.',
+    'drink-5-name': 'וויסקי סאוור',
+    'drink-5-ing': 'בורבון · לימון · סוכר · חלבון ביצה',
+    'drink-5-desc': 'חמצמץ, קרמי ומפנק — השילוב שגורם לך להזמין עוד אחד.',
+    'drink-6-name': 'מוחיטו',
+    'drink-6-ing': 'רום לבן · נענע · ליים · סוכר · סודה',
+    'drink-6-desc': 'רענן, קל ומזמין — הדרינק שתמיד מתאים, בכל מזג אוויר ובכל מצב רוח.',
+    'drink-7-name': 'פינה קולדה',
+    'drink-7-ing': 'רום · קוקוס · אננס',
+    'drink-7-desc': 'חופשה בכוס. קרמי, טרופי, ועם טעם של שקיעה על החוף.',
+    'drink-8-name': 'דייקירי',
+    'drink-8-ing': 'רום לבן · ליים · סוכר · תות',
+    'drink-8-desc': 'פשוט, נקי ומדויק — שלושה מרכיבים שיוצרים קסם.',
+    'drink-9-name': 'מרגריטה',
+    'drink-9-ing': 'טקילה · ליים · טריפל סק · מלח',
+    'drink-9-desc': 'חמצמצה, מלוחה ומרעננת — המלכה הבלתי מעורערת של כל מסיבה.',
+    'drink-10-name': 'אספרסו מרטיני',
+    'drink-10-ing': 'וודקה · ליקר קפה · אספרסו · סוכר',
+    'drink-10-desc': 'הדרינק שמעיר אותך ומשכר בו-זמנית. הכוכב של כל אירוע ערב.',
+    'drink-11-name': 'אפרול שפריץ',
+    'drink-11-ing': 'אפרול · פרוסקו · סודה · תפוז',
+    'drink-11-desc': 'שמש באיטליה בכל לגימה. קל, מבעבע, ומושלם לכל שעה.',
+    'drink-12-name': 'מוסקו מיול',
+    'drink-12-ing': "וודקה · בירת ג'ינג'ר · ליים",
+    'drink-12-desc': "הג'ינג'ר נותן בעיטה, הליים מאזן, והכוס הנחושת עושה את השאר.",
+    'drink-13-name': 'קוסמופוליטן',
+    'drink-13-ing': 'וודקה · טריפל סק · חמוציות · ליים',
+    'drink-13-desc': 'ורוד, שיקי ועם אטיטיוד — הדרינק שהפך לאייקון תרבותי.',
+    'drink-14-name': 'למון דרופ',
+    'drink-14-ing': 'וודקה · לימון · סוכר · טריפל סק',
+    'drink-14-desc': 'חד, מתוק-חמצמץ ובהיר — כמו קרן שמש בכוס מרטיני.',
+    'drink-15-name': 'B-52',
+    'drink-15-ing': "קהלואה · ביילי'ס · גרנד מרנייה",
+    'drink-15-desc': 'שלוש שכבות מושלמות שנמזגות בדיוק — שוט שהוא יצירת אמנות.',
+    'drinks-fact-1': '\u201Cהקוקטייל הראשון בהיסטוריה הוזכר בעיתון אמריקאי בשנת 1806 — והוא היה בעצם סוג של אולד פאשנד.\u201D',
+    'drinks-fact-2': '\u201Cהמילה \u2018Toast\u2019 (הרמת כוסית) מגיעה מהמנהג הרומאי העתיק לטבול לחם קלוי ביין כדי לרכך את החומציות.\u201D',
+    'drinks-cta-title': 'רוצים את הקוקטיילים האלה באירוע שלכם?',
+    'drinks-cta-text': 'אנחנו מתאימים תפריט קוקטיילים מושלם לכל סוג אירוע. דברו איתנו ונבנה יחד חוויה בלתי נשכחת.',
+    'drinks-cta-btn': 'בואו נדבר על האירוע שלכם',
     // Contact form
     'contact-title': 'צרו קשר',
     'contact-subtitle': 'השאירו פרטים ונחזור אליכם בהקדם',
@@ -202,6 +262,66 @@ const translations = {
     'corp-gallery-title': 'From Our Corporate Events',
     'corp-testimonial-quote': '\u201CPaul & Greg gave our corporate event a special touch. The brand-colored cocktails were a huge hit and the team was professional at the highest level.\u201D',
     'corp-testimonial-author': '\u2014 Ron M., Marketing Manager, Launch Event 2025',
+    // Drinks page
+    'nav-drinks': 'The Drinks',
+    'footer-drinks': 'The Drinks',
+    'drinks-hero-title': 'The Collection',
+    'drinks-hero-subtitle': 'The drinks we love to make, and the ones you simply have to know',
+    'drinks-filter-all': 'All',
+    'drinks-filter-classics': 'Classics',
+    'drinks-filter-tropical': 'Tropical',
+    'drinks-filter-modern': 'Modern',
+    'drinks-filter-specials': 'Specials',
+    'drink-1-name': 'Old Fashioned',
+    'drink-1-ing': 'Bourbon \u00B7 Sugar \u00B7 Bitters \u00B7 Orange Peel',
+    'drink-1-desc': 'The cocktail that started it all. Elegant, strong, and no-nonsense \u2014 exactly as it should be.',
+    'drink-2-name': 'Negroni',
+    'drink-2-ing': 'Gin \u00B7 Campari \u00B7 Sweet Vermouth',
+    'drink-2-desc': 'Bitter, sweet, and complex \u2014 the Italian cocktail that conquered the world.',
+    'drink-3-name': 'Martini',
+    'drink-3-ing': 'Gin \u00B7 Dry Vermouth \u00B7 Olive / Lemon',
+    'drink-3-desc': 'Distilled, minimalist, and elegant. James Bond knew what he was doing.',
+    'drink-4-name': 'Manhattan',
+    'drink-4-ing': 'Whiskey \u00B7 Sweet Vermouth \u00B7 Bitters \u00B7 Cherry',
+    'drink-4-desc': 'The New York classic. Smooth, rich, and with unmistakable character.',
+    'drink-5-name': 'Whiskey Sour',
+    'drink-5-ing': 'Bourbon \u00B7 Lemon \u00B7 Sugar \u00B7 Egg White',
+    'drink-5-desc': 'Tangy, creamy, and indulgent \u2014 the combo that makes you order another.',
+    'drink-6-name': 'Mojito',
+    'drink-6-ing': 'White Rum \u00B7 Mint \u00B7 Lime \u00B7 Sugar \u00B7 Soda',
+    'drink-6-desc': 'Fresh, light, and inviting \u2014 the drink that always fits, in any weather and any mood.',
+    'drink-7-name': 'Pi\u00F1a Colada',
+    'drink-7-ing': 'Rum \u00B7 Coconut \u00B7 Pineapple',
+    'drink-7-desc': 'A vacation in a glass. Creamy, tropical, and tasting like a sunset on the beach.',
+    'drink-8-name': 'Daiquiri',
+    'drink-8-ing': 'White Rum \u00B7 Lime \u00B7 Sugar \u00B7 Strawberry',
+    'drink-8-desc': 'Simple, clean, and precise \u2014 three ingredients creating magic.',
+    'drink-9-name': 'Margarita',
+    'drink-9-ing': 'Tequila \u00B7 Lime \u00B7 Triple Sec \u00B7 Salt',
+    'drink-9-desc': 'Tangy, salty, and refreshing \u2014 the undisputed queen of every party.',
+    'drink-10-name': 'Espresso Martini',
+    'drink-10-ing': 'Vodka \u00B7 Coffee Liqueur \u00B7 Espresso \u00B7 Sugar',
+    'drink-10-desc': 'The drink that wakes you up and gets you tipsy at the same time. The star of every evening event.',
+    'drink-11-name': 'Aperol Spritz',
+    'drink-11-ing': 'Aperol \u00B7 Prosecco \u00B7 Soda \u00B7 Orange',
+    'drink-11-desc': 'Italian sunshine in every sip. Light, bubbly, and perfect for any hour.',
+    'drink-12-name': 'Moscow Mule',
+    'drink-12-ing': 'Vodka \u00B7 Ginger Beer \u00B7 Lime',
+    'drink-12-desc': 'The ginger kicks, the lime balances, and the copper cup does the rest.',
+    'drink-13-name': 'Cosmopolitan',
+    'drink-13-ing': 'Vodka \u00B7 Triple Sec \u00B7 Cranberry \u00B7 Lime',
+    'drink-13-desc': 'Pink, chic, and with attitude \u2014 the drink that became a cultural icon.',
+    'drink-14-name': 'Lemon Drop',
+    'drink-14-ing': 'Vodka \u00B7 Lemon \u00B7 Sugar \u00B7 Triple Sec',
+    'drink-14-desc': 'Sharp, sweet-tart, and bright \u2014 like a sunbeam in a martini glass.',
+    'drink-15-name': 'B-52',
+    'drink-15-ing': "Kahl\u00FAa \u00B7 Baileys \u00B7 Grand Marnier",
+    'drink-15-desc': 'Three perfect layers poured with precision \u2014 a shot that is a work of art.',
+    'drinks-fact-1': '\u201CThe first cocktail in history was mentioned in an American newspaper in 1806 \u2014 and it was basically a type of Old Fashioned.\u201D',
+    'drinks-fact-2': '\u201CThe word \u2018Toast\u2019 (raising a glass) comes from the ancient Roman custom of dipping toasted bread into wine to soften the acidity.\u201D',
+    'drinks-cta-title': 'Want these cocktails at your event?',
+    'drinks-cta-text': 'We tailor a perfect cocktail menu for every type of event. Talk to us and let\u2019s build an unforgettable experience together.',
+    'drinks-cta-btn': 'Let\u2019s talk about your event',
     // Contact form
     'contact-title': 'Contact Us',
     'contact-subtitle': 'Leave your details and we\'ll get back to you shortly',
@@ -374,6 +494,50 @@ if (accordion) {
       card.addEventListener('focus', () => setActiveCard(i));
     });
     accordion.addEventListener('mouseleave', () => resetAllCards());
+  }
+}
+
+// Drinks page — category filter
+const drinksFilter = document.getElementById('drinks-filter');
+if (drinksFilter) {
+  const filterBtns = drinksFilter.querySelectorAll('.drink-filter-btn');
+  const drinkCards = document.querySelectorAll('#drinks-grid > [data-category]');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      // Update active button styles
+      filterBtns.forEach(b => {
+        b.classList.remove('active', 'border-amber-400/50', 'text-amber-400', 'bg-amber-400/10');
+        b.classList.add('border-gray-600', 'text-gray-400');
+      });
+      btn.classList.add('active', 'border-amber-400/50', 'text-amber-400', 'bg-amber-400/10');
+      btn.classList.remove('border-gray-600', 'text-gray-400');
+
+      // Filter cards
+      drinkCards.forEach(card => {
+        const cat = card.dataset.category;
+        if (filter === 'all' || cat === filter || cat === 'all') {
+          card.classList.remove('filter-hidden');
+        } else {
+          card.classList.add('filter-hidden');
+        }
+      });
+    });
+  });
+
+  // Touch device support — toggle overlay on tap
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  if (isTouchDevice) {
+    document.querySelectorAll('.drink-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        e.preventDefault();
+        const wasActive = card.classList.contains('touch-active');
+        document.querySelectorAll('.drink-card.touch-active').forEach(c => c.classList.remove('touch-active'));
+        if (!wasActive) card.classList.add('touch-active');
+      });
+    });
   }
 }
 
