@@ -75,6 +75,61 @@ textarea {
   scroll-margin-top: 12rem;
 }
 
+/* Subpage header: smooth background transition on scroll */
+#sticky-header.bg-transparent {
+  transition: background-color 300ms ease, box-shadow 300ms ease;
+}
+
+/* Scrolled state: solid background */
+#sticky-header.header-scrolled {
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+.dark #sticky-header.header-scrolled {
+  background-color: #111827;
+}
+
+/* Scrolled state: dark text for nav links, lang button, burger */
+#sticky-header.header-scrolled > div > div:nth-child(2),
+#sticky-header.header-scrolled #lang-btn,
+#sticky-header.header-scrolled #burger-btn {
+  color: #4B5563;
+}
+.dark #sticky-header.header-scrolled > div > div:nth-child(2),
+.dark #sticky-header.header-scrolled #lang-btn,
+.dark #sticky-header.header-scrolled #burger-btn {
+  color: #D1D5DB;
+}
+
+/* Scrolled: nav link hover + active link use primary */
+#sticky-header.header-scrolled > div > div:nth-child(2) a:hover,
+#sticky-header.header-scrolled .nav-active {
+  color: #5A6337;
+}
+.dark #sticky-header.header-scrolled > div > div:nth-child(2) a:hover,
+.dark #sticky-header.header-scrolled .nav-active {
+  color: #fff;
+}
+
+/* Scrolled: underlines use primary */
+#sticky-header.header-scrolled > div > div:nth-child(2) a::after {
+  background-color: #5A6337;
+}
+
+/* Scrolled: lang button border + hover */
+#sticky-header.header-scrolled #lang-btn {
+  border-color: #D1D5DB;
+}
+#sticky-header.header-scrolled #lang-btn:hover {
+  background-color: #F3F4F6;
+}
+.dark #sticky-header.header-scrolled #lang-btn {
+  border-color: #4B5563;
+}
+.dark #sticky-header.header-scrolled #lang-btn:hover {
+  background-color: #1F2937;
+}
+
 /* Instagram hover — brand gradient */
 .ig-hover:hover {
   border-color: #E1306C;

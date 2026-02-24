@@ -25,7 +25,7 @@ const translations = {
     'gallery-title': 'מהגלריה שלנו',
     'gallery-cta': 'עקבו אחרינו באינסטגרם',
     // Weddings page
-    'wed-hero-title': 'בר קוקטיילים לחתונות',
+    'wed-hero-title': 'חתונות וקבלות פנים',
     'wed-hero-subtitle': 'חווית קוקטיילים יוקרתית שתהפוך את היום המיוחד שלכם לבלתי נשכח',
     'wed-hero-cta': 'קבלו הצעת מחיר',
     'wed-desc-title': 'החתונה שלכם, הקוקטיילים שלנו',
@@ -254,7 +254,7 @@ const translations = {
     'gallery-title': 'From Our Gallery',
     'gallery-cta': 'Follow Us on Instagram',
     // Weddings page
-    'wed-hero-title': 'Wedding Cocktail Bar',
+    'wed-hero-title': 'Weddings & Receptions',
     'wed-hero-subtitle': 'A premium cocktail experience that will make your special day unforgettable',
     'wed-hero-cta': 'Get a Quote',
     'wed-desc-title': 'Your Wedding, Our Cocktails',
@@ -565,6 +565,28 @@ if (isHomepage) {
         } else {
           header.classList.add('-translate-y-full');
           header.classList.remove('translate-y-0');
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  window.addEventListener('resize', () => {
+    heroHeight = hero.offsetHeight;
+  }, { passive: true });
+} else {
+  // Subpages: header always visible, solid background appears after scrolling past banner
+  let heroHeight = hero.offsetHeight;
+  let ticking = false;
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        if (window.scrollY >= heroHeight) {
+          header.classList.add('header-scrolled');
+        } else {
+          header.classList.remove('header-scrolled');
         }
         ticking = false;
       });
