@@ -519,6 +519,34 @@ document.getElementById('lang-btn').addEventListener('click', () => {
   switchLanguage(current === 'he' ? 'en' : 'he');
 });
 
+// Mobile lang button
+const mobileLangBtn = document.getElementById('mobile-lang-btn');
+if (mobileLangBtn) {
+  mobileLangBtn.addEventListener('click', () => {
+    const current = document.documentElement.lang || 'he';
+    switchLanguage(current === 'he' ? 'en' : 'he');
+  });
+}
+
+// Burger menu toggle
+const burgerBtn = document.getElementById('burger-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+if (burgerBtn && mobileMenu) {
+  burgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      mobileMenu.classList.add('hidden');
+    }
+  }, { passive: true });
+}
+
 // Sticky header — shows after scrolling past hero section
 const header = document.getElementById('sticky-header');
 const hero = document.getElementById('hero-section');

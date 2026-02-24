@@ -81,11 +81,29 @@
     <a data-i18n="nav-drinks" href="/drinks" class="relative hover:text-primary dark:hover:text-white transition after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">הדרינקים</a>
 </div>
 <div class="flex-1 flex items-center justify-end gap-3">
-<button id="lang-btn" type="button" class="border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300 px-3 py-1.5 text-xs font-semibold rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition flex items-center gap-1.5">
+<button id="lang-btn" type="button" class="hidden md:flex border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300 px-3 py-1.5 text-xs font-semibold rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition items-center gap-1.5">
 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 0 1 5.08 16zm2.95-8H5.08a7.987 7.987 0 0 1 4.33-3.56A15.65 15.65 0 0 0 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
 <span data-i18n="lang-btn">EN</span>
 </button>
 <a data-i18n="nav-cta" class="bg-primary text-white px-5 py-2 text-sm font-semibold hover:bg-opacity-90 transition" href="#contact">יצירת קשר</a>
+<button id="burger-btn" type="button" class="md:hidden text-gray-600 dark:text-gray-300 p-2" aria-label="תפריט">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+</div>
+</div>
+<!-- Mobile menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-gray-50 dark:bg-gray-800 border-t border-gray-300 dark:border-gray-600 shadow-lg px-6 py-5">
+<div class="flex flex-col gap-4 text-lg text-gray-600 dark:text-gray-300 font-semibold">
+    <button id="mobile-lang-btn" type="button" class="border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300 px-3 py-1.5 text-xs font-semibold rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition flex items-center gap-1.5 w-fit self-end">
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 0 1 5.08 16zm2.95-8H5.08a7.987 7.987 0 0 1 4.33-3.56A15.65 15.65 0 0 0 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
+    <span data-i18n="lang-btn">EN</span>
+    </button>
+    <hr class="border-gray-300 dark:border-gray-600">
+    <a data-i18n="nav-story" href="#story" class="hover:text-primary transition">הסיפור שלנו</a>
+    <a data-i18n="nav-weddings" href="/weddings" class="hover:text-primary transition">חתונות וקבלות פנים</a>
+    <a data-i18n="nav-events" href="/events" class="hover:text-primary transition">אירועים פרטיים</a>
+    <a data-i18n="nav-corporate" href="/corporate" class="hover:text-primary transition">אירועי חברה</a>
+    <a data-i18n="nav-drinks" href="/drinks" class="hover:text-primary transition">הדרינקים</a>
 </div>
 </div>
 </nav>
@@ -310,8 +328,6 @@
 <div class="space-y-2 w-fit mx-auto md:mx-0">
 <h4 data-i18n="footer-follow" class="text-base font-bold border-b border-white/20 pb-1 inline-block md:block mb-2">עקבו אחרינו</h4>
 <ul class="space-y-1 text-sm font-light text-gray-200">
-<li><a data-i18n="footer-blog" class="hover:text-white transition" href="#">הבלוג של פול וגרג</a></li>
-<li><a data-i18n="footer-facebook" class="hover:text-white transition" href="#">פייסבוק | Paul_and_Greg_cocktail_events</a></li>
 <li><a data-i18n="footer-instagram" class="hover:text-white transition" href="https://www.instagram.com/png_drinks/" target="_blank" rel="noopener noreferrer">אינסטגרם | PAUL &amp; GREG EVENTS</a></li>
 </ul>
 </div>
