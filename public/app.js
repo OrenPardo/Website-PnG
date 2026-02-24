@@ -222,7 +222,7 @@ const translations = {
     'footer-contact': 'ליצירת קשר',
     'footer-phone-label': 'טלפון:',
     'footer-email-label': 'אימייל:',
-    'footer-copyright': 'כל הזכויות שמורות לפול וגרג בע"מ \u00A9 2026',
+    'footer-copyright': 'כל הזכויות שמורות לפול וגרג 2026',
     // WhatsApp
     'whatsapp-text': 'לתיאום אירוע בוואטסאפ',
     'whatsapp-aria': 'צרו קשר בוואטסאפ',
@@ -451,7 +451,7 @@ const translations = {
     'footer-contact': 'Contact Us',
     'footer-phone-label': 'Phone:',
     'footer-email-label': 'Email:',
-    'footer-copyright': 'All rights reserved to Paul & Greg Ltd. \u00A9 2026',
+    'footer-copyright': 'All rights reserved to Paul & Greg 2026',
     // WhatsApp
     'whatsapp-text': 'Book an event on WhatsApp',
     'whatsapp-aria': 'Contact us on WhatsApp',
