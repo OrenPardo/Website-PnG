@@ -547,31 +547,35 @@ if (burgerBtn && mobileMenu) {
   }, { passive: true });
 }
 
-// Sticky header — shows after scrolling past hero section
+// Sticky header — on homepage: shows after scrolling past hero; on subpages: always visible
 const header = document.getElementById('sticky-header');
 const hero = document.getElementById('hero-section');
-let heroHeight = hero.offsetHeight;
-let ticking = false;
+const isHomepage = window.location.pathname === '/';
 
-window.addEventListener('scroll', () => {
-  if (!ticking) {
-    requestAnimationFrame(() => {
-      if (window.scrollY >= heroHeight) {
-        header.classList.remove('-translate-y-full');
-        header.classList.add('translate-y-0');
-      } else {
-        header.classList.add('-translate-y-full');
-        header.classList.remove('translate-y-0');
-      }
-      ticking = false;
-    });
-    ticking = true;
-  }
-}, { passive: true });
+if (isHomepage) {
+  let heroHeight = hero.offsetHeight;
+  let ticking = false;
 
-window.addEventListener('resize', () => {
-  heroHeight = hero.offsetHeight;
-}, { passive: true });
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        if (window.scrollY >= heroHeight) {
+          header.classList.remove('-translate-y-full');
+          header.classList.add('translate-y-0');
+        } else {
+          header.classList.add('-translate-y-full');
+          header.classList.remove('translate-y-0');
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  window.addEventListener('resize', () => {
+    heroHeight = hero.offsetHeight;
+  }, { passive: true });
+}
 
 // Services accordion — expand/collapse on hover (desktop only, homepage only)
 const accordion = document.getElementById('services-accordion');
