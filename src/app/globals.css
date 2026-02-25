@@ -1,6 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #5A6337;
+  --color-brand-bg: #EFE6DE;
+  --color-background-light: #FFFFFF;
+  --color-background-dark: #0A1128;
+  --color-text-light: #333333;
+  --color-text-dark: #F3F4F6;
+  --font-sans: "Noto Sans Hebrew", sans-serif;
+  --radius: 0.25rem;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Custom scrollbar (Webkit browsers) */
 ::-webkit-scrollbar { width: 8px; }
@@ -90,43 +101,43 @@ textarea {
 }
 
 /* Scrolled state: dark text for nav links, lang button, burger */
-#sticky-header.header-scrolled > div > div:nth-child(2),
-#sticky-header.header-scrolled #lang-btn,
-#sticky-header.header-scrolled #burger-btn {
+#sticky-header.header-scrolled .nav-links-container,
+#sticky-header.header-scrolled .lang-btn,
+#sticky-header.header-scrolled .burger-btn {
   color: #4B5563;
 }
-.dark #sticky-header.header-scrolled > div > div:nth-child(2),
-.dark #sticky-header.header-scrolled #lang-btn,
-.dark #sticky-header.header-scrolled #burger-btn {
+.dark #sticky-header.header-scrolled .nav-links-container,
+.dark #sticky-header.header-scrolled .lang-btn,
+.dark #sticky-header.header-scrolled .burger-btn {
   color: #D1D5DB;
 }
 
 /* Scrolled: nav link hover + active link use primary */
-#sticky-header.header-scrolled > div > div:nth-child(2) a:hover,
+#sticky-header.header-scrolled .nav-links-container a:hover,
 #sticky-header.header-scrolled .nav-active {
   color: #5A6337;
 }
-.dark #sticky-header.header-scrolled > div > div:nth-child(2) a:hover,
+.dark #sticky-header.header-scrolled .nav-links-container a:hover,
 .dark #sticky-header.header-scrolled .nav-active {
   color: #fff;
 }
 
 /* Scrolled: underlines use primary */
-#sticky-header.header-scrolled > div > div:nth-child(2) a::after {
+#sticky-header.header-scrolled .nav-links-container a::after {
   background-color: #5A6337;
 }
 
 /* Scrolled: lang button border + hover */
-#sticky-header.header-scrolled #lang-btn {
+#sticky-header.header-scrolled .lang-btn {
   border-color: #D1D5DB;
 }
-#sticky-header.header-scrolled #lang-btn:hover {
+#sticky-header.header-scrolled .lang-btn:hover {
   background-color: #F3F4F6;
 }
-.dark #sticky-header.header-scrolled #lang-btn {
+.dark #sticky-header.header-scrolled .lang-btn {
   border-color: #4B5563;
 }
-.dark #sticky-header.header-scrolled #lang-btn:hover {
+.dark #sticky-header.header-scrolled .lang-btn:hover {
   background-color: #1F2937;
 }
 
@@ -175,11 +186,6 @@ textarea {
 .drink-card:hover .drink-overlay,
 .drink-card.touch-active .drink-overlay {
   opacity: 1;
-}
-
-/* Category filter hide */
-.filter-hidden {
-  display: none !important;
 }
 
 /* Scrollbar hide for horizontal filter bar */
