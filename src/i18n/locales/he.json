@@ -188,6 +188,7 @@
   "err-phone-email": "נא למלא טלפון או אימייל",
   "err-email-invalid": "נא להזין כתובת אימייל תקינה",
   "err-message": "נא לכתוב הודעה של לפחות 10 תווים",
+  "ph-event-type": "סוג אירוע",
   "opt-wedding": "חתונה",
   "opt-corporate": "אירוע חברה",
   "opt-birthday": "יום הולדת / מסיבה פרטית",

@@ -221,7 +221,7 @@ export default function DrinksPageContent() {
                   <div className="pt-6 border-t border-white/10">
                     <h3 className="text-xs font-semibold text-white tracking-widest uppercase mb-5">{t('contact-follow')}</h3>
                     <div className="flex gap-4">
-                      <a href="https://www.instagram.com/png_drinks/" target="_blank" rel="noopener noreferrer" className="ig-hover w-10 h-10 border border-gray-600 flex items-center justify-center text-gray-400 transition-all duration-300">
+                      <a href="https://www.instagram.com/png_drinks/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="ig-hover w-10 h-10 border border-gray-600 flex items-center justify-center text-gray-400 transition-all duration-300">
                         <InstagramIcon />
                       </a>
                     </div>

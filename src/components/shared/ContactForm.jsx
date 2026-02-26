@@ -89,7 +89,8 @@ export default function ContactForm({ dark = false }) {
         />
         {errors.email && <p className="text-red-500 text-xs mt-1">{t('err-email-invalid')}</p>}
       </div>
-      <select name="event_type" className={`w-full px-0 py-3 border-b ${borderClass} bg-transparent ${focusClass} outline-none transition text-start text-sm ${textClass}`}>
+      <label htmlFor="event_type" className="sr-only">{t('ph-event-type')}</label>
+      <select id="event_type" name="event_type" className={`w-full px-0 py-3 border-b ${borderClass} bg-transparent ${focusClass} outline-none transition text-start text-sm ${textClass}`}>
         <option className={selectBg}>{t('opt-wedding')}</option>
         <option className={selectBg}>{t('opt-corporate')}</option>
         <option className={selectBg}>{t('opt-birthday')}</option>

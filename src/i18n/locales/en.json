@@ -188,6 +188,7 @@
   "err-phone-email": "Please enter a phone number or email",
   "err-email-invalid": "Please enter a valid email address",
   "err-message": "Please write a message of at least 10 characters",
+  "ph-event-type": "Event type",
   "opt-wedding": "Wedding",
   "opt-corporate": "Corporate Event",
   "opt-birthday": "Birthday / Private Party",

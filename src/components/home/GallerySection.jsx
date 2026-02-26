@@ -20,7 +20,7 @@ export default function GallerySection() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-sans font-bold text-primary dark:text-white mb-2">{t('gallery-title')}</h2>
-          <a href="https://www.instagram.com/png_drinks/" target="_blank" rel="noopener noreferrer" className="text-gray-400 dark:text-gray-500 text-sm tracking-widest hover:text-primary dark:hover:text-white transition-colors">@png_drinks</a>
+          <a href="https://www.instagram.com/png_drinks/" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 text-sm tracking-widest hover:text-primary dark:hover:text-white transition-colors">@png_drinks</a>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] md:auto-rows-auto md:grid-rows-2 gap-2 max-w-5xl mx-auto md:h-[480px]">
           {gallery.map((item) => (
