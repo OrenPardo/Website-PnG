@@ -12,10 +12,8 @@ const notoSansHebrew = Noto_Sans_Hebrew({
 export const metadata = {
   metadataBase: new URL('https://www.paulandgreg.com'),
   icons: {
-    icon: [
-      { url: '/Favicon.svg', type: 'image/svg+xml' },
-      { url: '/logo.png', type: 'image/png' },
-    ],
+    icon: { url: '/favicon.svg', type: 'image/svg+xml' },
+    apple: '/logo.png',
   },
 };
 
